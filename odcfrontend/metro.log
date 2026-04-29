@@ -1,0 +1,74 @@
+Starting project at D:\ODCAPP\APP\odcfrontend
+React Compiler enabled
+Starting Metro Bundler
+Waiting on http://localhost:8081
+Logs for your project will appear below.
+Android node_modules\expo-router\entry.js ░░░░░░░░░░░░░░░░  0.0% (0/1)
+Android node_modules\expo-router\entry.js ░░░░░░░░░░░░░░░░  1.0% (1/1)
+Android node_modules\expo-router\entry.js ▓▓░░░░░░░░░░░░░░ 16.0% ( 32/179)
+Android node_modules\expo-router\entry.js ▓▓░░░░░░░░░░░░░░ 16.0% (106/304)
+Android node_modules\expo-router\entry.js ▓▓▓░░░░░░░░░░░░░ 24.9% (213/433)
+Android node_modules\expo-router\entry.js ▓▓▓▓░░░░░░░░░░░░ 30.0% (324/593)
+Android node_modules\expo-router\entry.js ▓▓▓▓▓▓▓░░░░░░░░░ 45.3% (466/692)
+Web node_modules\expo-router\entry.js ░░░░░░░░░░░░░░░░  0.0% (0/1)
+Android node_modules\expo-router\entry.js ▓▓▓▓▓▓▓░░░░░░░░░ 47.1% (522/761)
+Web node_modules\expo-router\entry.js ░░░░░░░░░░░░░░░░  0.0% (0/1)
+λ node_modules\expo-router\node\render.js ░░░░░░░░░░░░░░░░  0.0% (0/1)
+Android node_modules\expo-router\entry.js ▓▓▓▓▓▓▓▓░░░░░░░░ 52.4% (581/805)
+Web node_modules\expo-router\entry.js ░░░░░░░░░░░░░░░░  0.0% (0/1)
+λ node_modules\expo-router\node\render.js ░░░░░░░░░░░░░░░░  0.0% (0/1)
+Android node_modules\expo-router\entry.js ▓▓▓▓▓▓▓▓▓▓░░░░░░ 68.5% (731/899)
+Web node_modules\expo-router\entry.js ░░░░░░░░░░░░░░░░  0.0% (0/1)
+λ node_modules\expo-router\node\render.js ░░░░░░░░░░░░░░░░  0.0% (0/1)
+Android node_modules\expo-router\entry.js ▓▓▓▓▓▓▓▓▓▓▓▓░░░░ 81.0% ( 919/1027)
+Web node_modules\expo-router\entry.js ░░░░░░░░░░░░░░░░  1.0% (1/1)
+λ node_modules\expo-router\node\render.js ░░░░░░░░░░░░░░░░  0.0% (0/1)
+Android node_modules\expo-router\entry.js ▓▓▓▓▓▓▓▓▓▓▓▓▓░░░ 84.0% (1086/1185)
+Web node_modules\expo-router\entry.js ░░░░░░░░░░░░░░░░  1.0% (1/1)
+λ node_modules\expo-router\node\render.js ░░░░░░░░░░░░░░░░  0.0% (0/1)
+Android node_modules\expo-router\entry.js ▓▓▓▓▓▓▓▓▓▓▓▓▓░░░ 86.6% (1148/1265)
+Web node_modules\expo-router\entry.js ░░░░░░░░░░░░░░░░  1.0% (1/1)
+λ node_modules\expo-router\node\render.js ░░░░░░░░░░░░░░░░  2.3% ( 15/130)
+Android node_modules\expo-router\entry.js ▓▓▓▓▓▓▓▓▓▓▓▓▓░░░ 86.6% (1198/1305)
+Web node_modules\expo-router\entry.js ░░░░░░░░░░░░░░░░  1.0% (1/1)
+λ node_modules\expo-router\node\render.js ▓▓▓░░░░░░░░░░░░░ 19.4% (127/313)
+Android node_modules\expo-router\entry.js ▓▓▓▓▓▓▓▓▓▓▓▓▓░░░ 86.6% (1277/1437)
+Web node_modules\expo-router\entry.js ░░░░░░░░░░░░░░░░  1.0% (1/1)
+λ node_modules\expo-router\node\render.js ▓▓▓░░░░░░░░░░░░░ 19.4% (127/313)
+Android node_modules\expo-router\entry.js ▓▓▓▓▓▓▓▓▓▓▓▓▓░░░ 86.6% (1287/1445)
+Web node_modules\expo-router\entry.js ▓▓░░░░░░░░░░░░░░ 15.8% ( 99/249)
+λ node_modules\expo-router\node\render.js ▓▓▓▓▓▓░░░░░░░░░░ 39.2% (317/506)
+Android node_modules\expo-router\entry.js ▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░ 90.9% (1442/1513)
+Web node_modules\expo-router\entry.js ▓▓░░░░░░░░░░░░░░ 15.8% ( 99/249)
+λ node_modules\expo-router\node\render.js ▓▓▓▓▓▓▓▓▓▓░░░░░░ 64.6% (471/586)
+Android node_modules\expo-router\entry.js ▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░ 92.0% (1478/1550)
+Web node_modules\expo-router\entry.js ▓▓▓▓▓▓░░░░░░░░░░ 39.6% (282/448)
+λ node_modules\expo-router\node\render.js ▓▓▓▓▓▓▓▓▓▓▓░░░░░ 72.7% (634/780)
+Android node_modules\expo-router\entry.js ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░ 95.1% (1532/1571)
+Web node_modules\expo-router\entry.js ▓▓▓▓▓▓▓▓░░░░░░░░ 53.6% (456/623)
+λ node_modules\expo-router\node\render.js ▓▓▓▓▓▓▓▓▓▓▓░░░░░ 72.7% (777/924)
+Android node_modules\expo-router\entry.js ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░ 96.3% (1560/1592)
+Web node_modules\expo-router\entry.js ▓▓▓▓▓▓▓▓▓░░░░░░░ 58.0% (620/814)
+λ node_modules\expo-router\node\render.js ▓▓▓▓▓▓▓▓▓▓▓▓░░░░ 77.3% ( 913/1093)
+Android node_modules\expo-router\entry.js ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░ 97.2% (1604/1627)
+Web node_modules\expo-router\entry.js ▓▓▓▓▓▓▓▓▓▓▓▓░░░░ 79.0% ( 886/1052)
+λ node_modules\expo-router\node\render.js ▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░ 89.6% (1099/1161)
+Android node_modules\expo-router\entry.js ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░ 98.9% (1620/1629)
+Web node_modules\expo-router\entry.js ▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░ 89.8% (1117/1179)
+λ node_modules\expo-router\node\render.js ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░ 94.3% (1218/1261)
+Android Bundled 84002ms node_modules\expo-router\entry.js (1629 modules)
+λ Bundled 56790ms node_modules\expo-router\node\render.js (1329 modules)
+Web Bundled 57609ms node_modules\expo-router\entry.js (1327 modules)
+Web node_modules\expo-router\entry.js ▓▓▓▓░░░░░░░░░░░░ 29.3% (13/24)
+ LOG  Startup Token: null
+ LOG  Startup User: null
+Web node_modules\expo-router\entry.js ▓▓▓▓▓▓▓▓▓▓▓░░░░░ 73.2% ( 894/1053)
+Web Bundled 5909ms node_modules\expo-router\entry.js (1326 modules)
+ LOG  [web] Logs will appear in the browser console
+ LOG  Saved Token: dummy-token-1
+ LOG  Saved User: {"id":"1","name":"Super Admin","mobileNo":"9999999999","role":"superadmin"}
+ WARN  SafeAreaView has been deprecated and will be removed in a future release. Please use 'react-native-safe-area-context' instead. See https://github.com/th3rdwave/react-native-safe-area-context
+ WARN  Ignoring DevTools app debug target for 'com.odccourier.app' with title 'com.odccourier.app (LE2101)' and 'nativePageReloads' capability set to 'false'. 
+ INFO  Launching DevTools...
+› Detected a change in babel.config.js. Restart the server to see the new results. You may need to clear the bundler cache with the --clear flag for your changes to take effect.
+› Detected a change in metro.config.js. Restart the server to see the new results.
