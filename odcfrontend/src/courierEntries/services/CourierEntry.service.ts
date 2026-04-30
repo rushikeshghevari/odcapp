@@ -40,14 +40,15 @@ function buildPhotoUrl(picture?: string | null) {
     }
 
     if (/^https?:\/\//i.test(picture)) {
-        return picture;
+        const separator = picture.includes("?") ? "&" : "?";
+        return `${picture}${separator}t=${Date.now()}`;
     }
 
     // Extract just the filename, regardless of whether it's an absolute Windows path or relative Unix path
     const filename = picture.split(/[\\/]/).pop();
 
     // The backend serves static files at /uploads
-    return `${uploadBaseUrl}/uploads/${filename}`;
+    return `${uploadBaseUrl}/uploads/${filename}?t=${Date.now()}`;
 }
 
 function mapEntryRow(item: CourierEntryApiRow): CourierEntryRow {
@@ -63,6 +64,20 @@ function mapEntryRow(item: CourierEntryApiRow): CourierEntryRow {
         phoneNumber: item.contactNumber,
         collectedBy: item.collectedBy,
         photoUri: buildPhotoUrl(item.picture),
+    };
+}
+
+function withCourierNameFallback(
+    row: CourierEntryRow,
+    fallbackCourierName: string
+): CourierEntryRow {
+    if (row.courierName) {
+        return row;
+    }
+
+    return {
+        ...row,
+        courierName: fallbackCourierName,
     };
 }
 
@@ -144,7 +159,10 @@ export class CourierEntryService {
         return {
             success: response.data.success,
             message: response.data.message,
-            data: mapEntryRow(response.data.data),
+            data: withCourierNameFallback(
+                mapEntryRow(response.data.data),
+                payload.courierName
+            ),
         };
     }
 
@@ -168,7 +186,10 @@ export class CourierEntryService {
         return {
             success: response.data.success,
             message: response.data.message,
-            data: mapEntryRow(response.data.data),
+            data: withCourierNameFallback(
+                mapEntryRow(response.data.data),
+                payload.courierName
+            ),
         };
     }
 
@@ -176,15 +197,19 @@ export class CourierEntryService {
         entryId: string,
         base64String: string
     ): Promise<CourierEntryResponse> {
-        // Send the photo as a base64 string in a standard JSON payload.
-        // This permanently bypasses React Native Android's notorious FormData network crash bugs!
         const response = await apiClient.put<{
             success: boolean;
             message: string;
             data: CourierEntryApiRow;
-        }>(`/courier/${entryId}`, {
-            pictureBase64: `data:image/jpeg;base64,${base64String}`
-        });
+        }>(
+            `/courier/${entryId}`,
+            {
+                pictureBase64: `data:image/jpeg;base64,${base64String}`,
+            },
+            {
+                timeout: 120000,
+            }
+        );
 
         return {
             success: response.data.success,
@@ -198,3 +223,4 @@ export class CourierEntryService {
         return this.getEntries();
     }
 }
+

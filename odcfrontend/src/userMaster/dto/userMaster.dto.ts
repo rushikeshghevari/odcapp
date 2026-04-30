@@ -1,18 +1,42 @@
 import { z } from "zod";
 
 export const userMasterSchema = z.object({
-    uuid4: z.string().optional(),
+    uuid4: z
+        .string()
+        .uuid("Invalid user ID.")
+        .optional(),
 
     mobileNo: z
         .string()
         .trim()
-        .min(1, "Mobile number is required")
-        .regex(/^[0-9]{10}$/, "Enter valid 10 digit mobile number"),
+        .min(1, "Mobile number is required.")
+        .regex(
+            /^[6-9][0-9]{9}$/,
+            "Enter valid 10 digit Indian mobile number."
+        ),
 
     name: z
         .string()
         .trim()
-        .min(1, "Name is required"),
+        .min(1, "Name is required.")
+        .min(2, "Name must be at least 2 characters.")
+        .max(50, "Name must not be more than 50 characters.")
+        .regex(
+            /^[A-Za-z ]+$/,
+            "Name should contain only letters."
+        )
+        .refine(
+            (value) => value.trim().length > 0,
+            "Name cannot be empty."
+        )
+        .refine(
+            (value) => !/\s{2,}/.test(value),
+            "Name should not contain multiple spaces."
+        )
+        .refine(
+            (value) => value.split(" ").every((word) => word.length >= 2),
+            "Each name word must be at least 2 characters."
+        ),
 });
 
 export type UserMasterFormValues = z.infer<typeof userMasterSchema>;

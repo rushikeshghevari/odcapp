@@ -7,6 +7,20 @@ import type {
     LoggedInUserDto,
 } from "../dto/history.dto";
 
+const uploadBaseUrl = (apiClient.defaults.baseURL || "").replace(/\/api\/?$/, "");
+
+function buildPhotoUrl(picture?: string | null) {
+    if (!picture) return "";
+
+    if (/^https?:\/\//i.test(picture)) {
+        const separator = picture.includes("?") ? "&" : "?";
+        return `${picture}${separator}t=${Date.now()}`;
+    }
+
+    const filename = picture.split(/[\\/]/).pop();
+    return `${uploadBaseUrl}/uploads/${filename}?t=${Date.now()}`;
+}
+
 export class HistoryService {
     static async getLoggedInUser(): Promise<LoggedInUserDto | null> {
         const storedUser = await AsyncStorage.getItem("loggedInUser");
@@ -48,6 +62,7 @@ export class HistoryService {
                 collectedBy: item.collectedBy,
                 hasPhoto: !!item.picture,
                 userMobileNo: item.contactNumber,
+                photoUri: buildPhotoUrl(item.picture),
             }));
 
             const filteredData =

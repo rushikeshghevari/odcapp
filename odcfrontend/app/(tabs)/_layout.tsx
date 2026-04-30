@@ -340,23 +340,6 @@ export default function TabLayout() {
       />
 
       <Tabs.Screen
-        name="account/index"
-        options={{
-          title: "Account",
-          tabBarIcon: ({ focused }) => (
-            <Ionicons
-              name={focused ? "person" : "person-outline"}
-              size={22}
-              color={focused ? "#000000" : "#8a8a8a"}
-            />
-          ),
-          tabBarLabel: ({ focused }) => (
-            <TabLabel focused={focused} title="Account" />
-          ),
-        }}
-      />
-
-      <Tabs.Screen
         name="settings"
         options={{
           title: "Settings",
@@ -370,6 +353,23 @@ export default function TabLayout() {
           ),
           tabBarLabel: ({ focused }) => (
             <TabLabel focused={focused} title="Settings" />
+          ),
+        }}
+      />
+
+      <Tabs.Screen
+        name="account/index"
+        options={{
+          title: "Account",
+          tabBarIcon: ({ focused }) => (
+            <Ionicons
+              name={focused ? "person" : "person-outline"}
+              size={22}
+              color={focused ? "#000000" : "#8a8a8a"}
+            />
+          ),
+          tabBarLabel: ({ focused }) => (
+            <TabLabel focused={focused} title="Account" />
           ),
         }}
       />
