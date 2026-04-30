@@ -105,11 +105,9 @@ export const updateCourierEntryService = async (
   id: string,
   data: any
 ) => {
-  return await CourierEntry.findByIdAndUpdate(
-    id,
-    data,
-    { new: true }
-  );
+  return await CourierEntry.findByIdAndUpdate(id, data, {
+    new: true,
+  }).populate("courierId");
 };
 
 // DELETE

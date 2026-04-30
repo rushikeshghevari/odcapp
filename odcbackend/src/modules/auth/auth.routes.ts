@@ -10,13 +10,15 @@ import { checkRole, verifyToken } from "./auth.middleware";
 
 const router = express.Router();
 
-// Register (only SUPERADMIN)
+//Register(only SUPERADMIN)
 router.post(
- "/register",
+  "/register",
   verifyToken,
   checkRole("SUPERADMIN"),
   registerUser
 );
+
+//router.post("/register", registerUser);
 
 // Signup (public)
 router.post("/signup", signupUser);

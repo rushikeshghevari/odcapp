@@ -1,4 +1,6 @@
 import { Request, Response } from "express";
+import { promises as fs } from "fs";
+import path from "path";
 import {
   createCourierEntryService,
   getCourierEntriesService,
@@ -113,16 +115,14 @@ export const updateCourierEntry = async (
     if (req.file) {
       data.picture = req.file.path;
     } else if (req.body.pictureBase64) {
-      const fs = require("fs");
-      const path = require("path");
-      
       const base64Data = req.body.pictureBase64.replace(/^data:image\/\w+;base64,/, "");
       const buffer = Buffer.from(base64Data, "base64");
       
       const filename = Date.now() + "-base64-" + req.params.id + ".jpg";
       const filepath = path.join(process.cwd(), "public", "uploads", filename);
-      
-      fs.writeFileSync(filepath, buffer);
+
+      await fs.mkdir(path.dirname(filepath), { recursive: true });
+      await fs.writeFile(filepath, buffer);
       data.picture = filepath;
     }
 
